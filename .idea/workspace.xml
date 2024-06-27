@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="gitignore add">
+    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="JUnit을 통한 단위 테스트 연습">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/devduck/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devduck/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/devkduck/springboot/web/HelloControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/devkduck/springboot/web/HelloControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +77,11 @@
     "Gradle.HelloControllerTest (1).executor": "Run",
     "Gradle.HelloControllerTest.executor": "Run",
     "Gradle.HelloControllerTest.hello_return.executor": "Run",
+    "Gradle.HelloResponseTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.Application.executor": "Run",
     "git-widget-placeholder": "main",
@@ -86,7 +92,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/Users/duck/git/miniProject/src/main/java/com/devduck/Main.java",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -163,6 +169,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="HelloResponseTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.devkduck.springboot.web.dto.HelloResponseTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="miniProject.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.devkduck.springboot.Application" />
@@ -173,6 +203,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.HelloControllerTest (1)" />
+        <item itemvalue="Gradle.HelloResponseTest" />
         <item itemvalue="Gradle.HelloControllerTest.hello_return" />
         <item itemvalue="Gradle.HelloControllerTest" />
       </list>
@@ -195,7 +226,9 @@
       <option name="presentableId" value="Default" />
       <updated>1719388718333</updated>
       <workItem from="1719388720073" duration="3477000" />
-      <workItem from="1719392883119" duration="3227000" />
+      <workItem from="1719392883119" duration="3455000" />
+      <workItem from="1719467389648" duration="2263000" />
+      <workItem from="1719470511650" duration="1514000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore add">
       <option name="closed" value="true" />
@@ -213,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719393242755</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="JUnit을 통한 단위 테스트 연습">
+      <option name="closed" value="true" />
+      <created>1719397190278</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719397190278</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +262,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignore add" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore add" />
+    <MESSAGE value="JUnit을 통한 단위 테스트 연습" />
+    <option name="LAST_COMMIT_MESSAGE" value="JUnit을 통한 단위 테스트 연습" />
   </component>
 </project>
