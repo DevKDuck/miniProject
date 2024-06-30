@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[JUnit] Entity와 Repository를 이용하여 Jpa 테스트 (h2 DB)">
+    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[JUnit] update를 이용하여 JPA 영속성 컨텍스트 확인">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/dto/PostsResponseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/service/posts/PostsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/service/posts/PostsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/PostsApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/PostsApiController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,34 +74,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build miniProject.executor": "Run",
-    "Gradle.HelloControllerTest (1).executor": "Run",
-    "Gradle.HelloControllerTest.executor": "Run",
-    "Gradle.HelloControllerTest.hello_return.executor": "Run",
-    "Gradle.HelloResponseTest.executor": "Run",
-    "Gradle.PostsApiControllerTest.Posts_등록된다.executor": "Run",
-    "Gradle.PostsApiControllerTest.executor": "Run",
-    "Gradle.PostsRepositoryTest.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Application.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/duck/git/miniProject/src/main/java/com/devduck/Main.java",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build miniProject.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HelloControllerTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HelloControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HelloControllerTest.hello_return.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HelloResponseTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostsApiControllerTest.Posts_등록된다.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostsApiControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostsRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/duck/git/miniProject/src/main/java/com/devduck/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Gradle.PostsApiControllerTest">
     <configuration name="HelloControllerTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -257,7 +260,8 @@
       <workItem from="1719392883119" duration="3455000" />
       <workItem from="1719467389648" duration="2263000" />
       <workItem from="1719470511650" duration="1514000" />
-      <workItem from="1719574130369" duration="2820000" />
+      <workItem from="1719574130369" duration="3180000" />
+      <workItem from="1719742948684" duration="2721000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore add">
       <option name="closed" value="true" />
@@ -291,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719482054220</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[JUnit] WebEnvironment.RANDOM_PORT로 랜덤 포트 실행과 insert 쿼리 실행 테스트">
+      <option name="closed" value="true" />
+      <created>1719577143647</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719577143647</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +313,8 @@
     <MESSAGE value="gitignore add" />
     <MESSAGE value="JUnit을 통한 단위 테스트 연습" />
     <MESSAGE value="[JUnit] Entity와 Repository를 이용하여 Jpa 테스트 (h2 DB)" />
-    <option name="LAST_COMMIT_MESSAGE" value="[JUnit] Entity와 Repository를 이용하여 Jpa 테스트 (h2 DB)" />
+    <MESSAGE value="[JUnit] WebEnvironment.RANDOM_PORT로 랜덤 포트 실행과 insert 쿼리 실행 테스트" />
+    <MESSAGE value="[JUnit] update를 이용하여 JPA 영속성 컨텍스트 확인" />
+    <option name="LAST_COMMIT_MESSAGE" value="[JUnit] update를 이용하여 JPA 영속성 컨텍스트 확인" />
   </component>
 </project>
