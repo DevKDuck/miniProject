@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[JUnit] JPA Auditing (BaseTimeEntity 추상 메서드) 상속하여 등록일, 수정일 자동 관리">
+    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[JUnit] Mustache로 화면 구성하기">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/posts/PostsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/posts/PostsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/service/posts/PostsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/service/posts/PostsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +44,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
@@ -101,7 +104,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;/Users/duck/git/miniProject/src/main/java/com/devduck/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -229,10 +232,19 @@
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="miniProject.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.devkduck.springboot.Application" />
+      <option name="VM_PARAMETERS" value="-Dfile.encoding=UTF-8" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.IndexControllerTest" />
+      <item itemvalue="Gradle.IndexControllerTest.mainPageLoading" />
+      <item itemvalue="Gradle.PostsApiControllerTest" />
+      <item itemvalue="Gradle.PostsApiControllerTest.postsUpdate" />
+      <item itemvalue="Gradle.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect" />
+      <item itemvalue="Spring Boot.Application" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.IndexControllerTest" />
@@ -267,7 +279,8 @@
       <workItem from="1719742948684" duration="2727000" />
       <workItem from="1719796187560" duration="4681000" />
       <workItem from="1719816829820" duration="1477000" />
-      <workItem from="1719818348466" duration="138000" />
+      <workItem from="1719818348466" duration="1734000" />
+      <workItem from="1719820243123" duration="4702000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore add">
       <option name="closed" value="true" />
@@ -333,7 +346,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719802746593</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[JUnit] Mustache로 화면 구성하기">
+      <option name="closed" value="true" />
+      <created>1719818774942</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719818774942</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +368,8 @@
     <MESSAGE value="[JUnit] update를 이용하여 JPA 영속성 컨텍스트 확인" />
     <MESSAGE value="[JUnit] h2를 이용하여 등록/수정/조회 테스트" />
     <MESSAGE value="[JUnit] JPA Auditing (BaseTimeEntity 추상 메서드) 상속하여 등록일, 수정일 자동 관리" />
-    <option name="LAST_COMMIT_MESSAGE" value="[JUnit] JPA Auditing (BaseTimeEntity 추상 메서드) 상속하여 등록일, 수정일 자동 관리" />
+    <MESSAGE value="[JUnit] Mustache로 화면 구성하기" />
+    <option name="LAST_COMMIT_MESSAGE" value="[JUnit] Mustache로 화면 구성하기" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -359,5 +381,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

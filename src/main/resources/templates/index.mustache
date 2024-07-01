@@ -1,10 +1,33 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <title>Spring Boot Web Service</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
+{{>layout/header}}
 <h1>Start Web Service</h1>
-</body>
-</html>
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-6">
+      <a href="/posts/save" role="button" class="btn btn-primary">Add</a>
+    </div>
+  </div>
+  <br>
+
+  <table class="table table-horizontal table-bordered">
+
+    <thead class="thead-strong">
+    <tr>
+      <th>no</th>
+      <th>title</th>
+      <th>author</th>
+      <th>lastChangedDate</th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
+    {{#posts}}
+      <tr>
+        <td>{{id}}</td>
+        <td>{{title}}</td>
+        <td>{{author}}</td>
+        <td>{{modifiedDate}}</td>
+      </tr>
+      {{/posts}}
+    </tbody>
+  </table>
+</div>
+{{>layout/footer}}
