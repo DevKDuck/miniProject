@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[JUnit] update를 이용하여 JPA 영속성 컨텍스트 확인">
+    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[JUnit] h2를 이용하여 등록/수정/조회 테스트">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/posts/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/posts/Posts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/service/posts/PostsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/service/posts/PostsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/PostsApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/PostsApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/devkduck/springboot/web/PostsApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/devkduck/springboot/web/PostsApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/devkduck/springboot/domain/posts/PostsRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/devkduck/springboot/domain/posts/PostsRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +84,7 @@
     "Gradle.PostsApiControllerTest.Posts_등록된다.executor": "Run",
     "Gradle.PostsApiControllerTest.executor": "Run",
     "Gradle.PostsApiControllerTest.postsUpdate.executor": "Run",
+    "Gradle.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect.executor": "Run",
     "Gradle.PostsRepositoryTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -104,31 +104,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="HelloControllerTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.devkduck.springboot.web.HelloControllerTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect">
     <configuration name="PostsApiControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -225,6 +201,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.devkduck.springboot.domain.posts.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="miniProject.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.devkduck.springboot.Application" />
@@ -234,11 +234,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect" />
         <item itemvalue="Gradle.PostsApiControllerTest.postsUpdate" />
         <item itemvalue="Gradle.PostsApiControllerTest" />
         <item itemvalue="Gradle.PostsApiControllerTest.Posts_등록된다" />
         <item itemvalue="Gradle.PostsRepositoryTest" />
-        <item itemvalue="Gradle.HelloControllerTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +264,7 @@
       <workItem from="1719470511650" duration="1514000" />
       <workItem from="1719574130369" duration="3180000" />
       <workItem from="1719742948684" duration="2727000" />
-      <workItem from="1719796187560" duration="1015000" />
+      <workItem from="1719796187560" duration="4132000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore add">
       <option name="closed" value="true" />
@@ -314,7 +314,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719752433672</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[JUnit] h2를 이용하여 등록/수정/조회 테스트">
+      <option name="closed" value="true" />
+      <created>1719797715659</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719797715659</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +334,7 @@
     <MESSAGE value="[JUnit] Entity와 Repository를 이용하여 Jpa 테스트 (h2 DB)" />
     <MESSAGE value="[JUnit] WebEnvironment.RANDOM_PORT로 랜덤 포트 실행과 insert 쿼리 실행 테스트" />
     <MESSAGE value="[JUnit] update를 이용하여 JPA 영속성 컨텍스트 확인" />
-    <option name="LAST_COMMIT_MESSAGE" value="[JUnit] update를 이용하여 JPA 영속성 컨텍스트 확인" />
+    <MESSAGE value="[JUnit] h2를 이용하여 등록/수정/조회 테스트" />
+    <option name="LAST_COMMIT_MESSAGE" value="[JUnit] h2를 이용하여 등록/수정/조회 테스트" />
   </component>
 </project>

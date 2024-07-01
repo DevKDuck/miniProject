@@ -1,15 +1,15 @@
 package com.devkduck.springboot.domain.posts;
 
+import com.devkduck.springboot.domain.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-
 @Getter
 @NoArgsConstructor // 기본 생성자 자동 추가
 @Entity// 테이블과 링크될 클래스
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id // PK 필드
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK 생성 규칙 GenerationType.IDENTITY - auto increment
