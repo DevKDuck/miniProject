@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[JUnit] h2를 이용하여 등록/수정/조회 테스트">
+    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[JUnit] JPA Auditing (BaseTimeEntity 추상 메서드) 상속하여 등록일, 수정일 자동 관리">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/posts/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/posts/Posts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/devkduck/springboot/domain/posts/PostsRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/devkduck/springboot/domain/posts/PostsRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,37 +73,87 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build miniProject.executor": "Run",
-    "Gradle.HelloControllerTest (1).executor": "Run",
-    "Gradle.HelloControllerTest.executor": "Run",
-    "Gradle.HelloControllerTest.hello_return.executor": "Run",
-    "Gradle.HelloResponseTest.executor": "Run",
-    "Gradle.PostsApiControllerTest.Posts_등록된다.executor": "Run",
-    "Gradle.PostsApiControllerTest.executor": "Run",
-    "Gradle.PostsApiControllerTest.postsUpdate.executor": "Run",
-    "Gradle.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect.executor": "Run",
-    "Gradle.PostsRepositoryTest.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Application.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/duck/git/miniProject/src/main/java/com/devduck/Main.java",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build miniProject.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HelloControllerTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HelloControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HelloControllerTest.hello_return.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HelloResponseTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.IndexControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.IndexControllerTest.mainPageLoading.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostsApiControllerTest.Posts_등록된다.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostsApiControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostsApiControllerTest.postsUpdate.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostsRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/duck/git/miniProject/src/main/java/com/devduck/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Gradle.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect">
+}</component>
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="IndexControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.devkduck.springboot.web.IndexControllerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="IndexControllerTest.mainPageLoading" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.devkduck.springboot.web.IndexControllerTest.mainPageLoading&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="PostsApiControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -129,30 +178,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="PostsApiControllerTest.Posts_등록된다" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.devkduck.springboot.web.PostsApiControllerTest.Posts_등록된다&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="PostsApiControllerTest.postsUpdate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -167,30 +192,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.devkduck.springboot.web.PostsApiControllerTest.postsUpdate&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="PostsRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.devkduck.springboot.domain.posts.PostsRepositoryTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -234,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.IndexControllerTest" />
+        <item itemvalue="Gradle.IndexControllerTest.mainPageLoading" />
         <item itemvalue="Gradle.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect" />
         <item itemvalue="Gradle.PostsApiControllerTest.postsUpdate" />
         <item itemvalue="Gradle.PostsApiControllerTest" />
-        <item itemvalue="Gradle.PostsApiControllerTest.Posts_등록된다" />
-        <item itemvalue="Gradle.PostsRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +265,9 @@
       <workItem from="1719470511650" duration="1514000" />
       <workItem from="1719574130369" duration="3180000" />
       <workItem from="1719742948684" duration="2727000" />
-      <workItem from="1719796187560" duration="4132000" />
+      <workItem from="1719796187560" duration="4681000" />
+      <workItem from="1719816829820" duration="1477000" />
+      <workItem from="1719818348466" duration="138000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore add">
       <option name="closed" value="true" />
@@ -322,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719797715659</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[JUnit] JPA Auditing (BaseTimeEntity 추상 메서드) 상속하여 등록일, 수정일 자동 관리">
+      <option name="closed" value="true" />
+      <created>1719802746593</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719802746593</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +346,18 @@
     <MESSAGE value="[JUnit] WebEnvironment.RANDOM_PORT로 랜덤 포트 실행과 insert 쿼리 실행 테스트" />
     <MESSAGE value="[JUnit] update를 이용하여 JPA 영속성 컨텍스트 확인" />
     <MESSAGE value="[JUnit] h2를 이용하여 등록/수정/조회 테스트" />
-    <option name="LAST_COMMIT_MESSAGE" value="[JUnit] h2를 이용하여 등록/수정/조회 테스트" />
+    <MESSAGE value="[JUnit] JPA Auditing (BaseTimeEntity 추상 메서드) 상속하여 등록일, 수정일 자동 관리" />
+    <option name="LAST_COMMIT_MESSAGE" value="[JUnit] JPA Auditing (BaseTimeEntity 추상 메서드) 상속하여 등록일, 수정일 자동 관리" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/devkduck/springboot/web/PostsApiControllerTest.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
