@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[JUnit] Mustache로 화면 구성하기">
+    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="게시판 추가,조회 구성">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/posts/PostsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/posts/PostsRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/service/posts/PostsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/service/posts/PostsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/PostsApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/PostsApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/app/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +64,10 @@
     &quot;url&quot;: &quot;https://github.com/DevKDuck/miniProject.git&quot;,
     &quot;accountId&quot;: &quot;f3a7632c-403a-4b26-8592-df5bac262618&quot;
   }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
 }</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -280,7 +285,10 @@
       <workItem from="1719796187560" duration="4681000" />
       <workItem from="1719816829820" duration="1477000" />
       <workItem from="1719818348466" duration="1734000" />
-      <workItem from="1719820243123" duration="4702000" />
+      <workItem from="1719820243123" duration="5059000" />
+      <workItem from="1719890184258" duration="70000" />
+      <workItem from="1719890276487" duration="4013000" />
+      <workItem from="1719902625224" duration="789000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore add">
       <option name="closed" value="true" />
@@ -354,7 +362,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719818774942</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="게시판 추가,조회 구성">
+      <option name="closed" value="true" />
+      <created>1719829692387</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719829692387</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +385,8 @@
     <MESSAGE value="[JUnit] h2를 이용하여 등록/수정/조회 테스트" />
     <MESSAGE value="[JUnit] JPA Auditing (BaseTimeEntity 추상 메서드) 상속하여 등록일, 수정일 자동 관리" />
     <MESSAGE value="[JUnit] Mustache로 화면 구성하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="[JUnit] Mustache로 화면 구성하기" />
+    <MESSAGE value="게시판 추가,조회 구성" />
+    <option name="LAST_COMMIT_MESSAGE" value="게시판 추가,조회 구성" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
