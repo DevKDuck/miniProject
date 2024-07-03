@@ -42,3 +42,6 @@ bin/
 ### Mac OS ###
 .DS_Store
 
+# 애플리케이션 설정 파일 중 OAuth 관련 파일을 제외
+application-oauth.yml
+
