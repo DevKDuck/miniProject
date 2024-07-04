@@ -1,6 +1,5 @@
 package com.devkduck.springboot.web;
 
-import com.devkduck.springboot.config.auth.LoginUser;
 import com.devkduck.springboot.config.auth.dto.SessionUser;
 import com.devkduck.springboot.domain.user.User;
 import com.devkduck.springboot.service.posts.PostsService;
@@ -20,11 +19,23 @@ public class IndexController {
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model, @LoginUser SessionUser user) {
+//    public String index(Model model, @LoginUser SessionUser user) {
+    public String index(Model model) {
+
         model.addAttribute("posts", postsService.findAllDesc());
-        if (user != null) {
-            model.addAttribute("userName", user.getName());
+
+        SessionUser sessionUser = (SessionUser) httpSession.getAttribute("user");
+
+        if (sessionUser != null) {
+            User user = new User();
+            user.setId(sessionUser.getId());
+            user.setName(sessionUser.getName());
+            user.setEmail(sessionUser.getEmail());
+
+            model.addAttribute("userEmail", user.getEmail());
         }
+
+
         return "index";
     }
 

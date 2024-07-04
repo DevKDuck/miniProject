@@ -2,15 +2,18 @@ spring:
   profiles:
     include: oauth
 
+  h2:
+    console:
+      enabled: true
+
   datasource:
     url: jdbc:h2:mem:testdb;MODE=MySQL
     driverClassName: org.h2.Driver
     username: sa
     password: password
 
-h2:
-  console:
-    enabled: true
+  session:
+    store-type: jdbc
 
 jpa:
   show-sql: true

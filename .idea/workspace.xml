@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[JPA] 게시판 수정,삭제 구성">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선,">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/CustomOAuth2UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/LoginUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/LoginUserArgumentResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/dto/OAuthAttributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/dto/SessionUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/user/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/user/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/user/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -293,7 +301,7 @@
       <workItem from="1719890184258" duration="70000" />
       <workItem from="1719890276487" duration="4013000" />
       <workItem from="1719902625224" duration="11867000" />
-      <workItem from="1719984893062" duration="9738000" />
+      <workItem from="1719984893062" duration="22189000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore add">
       <option name="closed" value="true" />
@@ -383,7 +391,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719904541751</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="SpringSecurity + Google Login">
+      <option name="closed" value="true" />
+      <created>1719996057035</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1719996057035</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +416,9 @@
     <MESSAGE value="[JUnit] Mustache로 화면 구성하기" />
     <MESSAGE value="게시판 추가,조회 구성" />
     <MESSAGE value="[JPA] 게시판 수정,삭제 구성" />
-    <option name="LAST_COMMIT_MESSAGE" value="[JPA] 게시판 수정,삭제 구성" />
+    <MESSAGE value="SpringSecurity + Google Login" />
+    <MESSAGE value="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선," />
+    <option name="LAST_COMMIT_MESSAGE" value="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선," />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
