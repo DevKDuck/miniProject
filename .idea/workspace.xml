@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선,">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/CustomOAuth2UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/LoginUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/LoginUserArgumentResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/dto/OAuthAttributes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/dto/SessionUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/user/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/domain/user/UserRepository.java" afterDir="false" />
+    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선, 세션저장소로 데이터베이스 사용">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/CustomOAuth2UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/CustomOAuth2UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/dto/OAuthAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/dto/OAuthAttributes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,38 +83,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build miniProject.executor": "Run",
-    "Gradle.HelloControllerTest (1).executor": "Run",
-    "Gradle.HelloControllerTest.executor": "Run",
-    "Gradle.HelloControllerTest.hello_return.executor": "Run",
-    "Gradle.HelloResponseTest.executor": "Run",
-    "Gradle.IndexControllerTest.executor": "Run",
-    "Gradle.IndexControllerTest.mainPageLoading.executor": "Run",
-    "Gradle.PostsApiControllerTest.Posts_등록된다.executor": "Run",
-    "Gradle.PostsApiControllerTest.executor": "Run",
-    "Gradle.PostsApiControllerTest.postsUpdate.executor": "Run",
-    "Gradle.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect.executor": "Run",
-    "Gradle.PostsRepositoryTest.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Application.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/duck/git/miniProject/src/main/java/com/devduck/Main.java",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build miniProject.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HelloControllerTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HelloControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HelloControllerTest.hello_return.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HelloResponseTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.IndexControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.IndexControllerTest.mainPageLoading.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostsApiControllerTest.Posts_등록된다.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostsApiControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostsApiControllerTest.postsUpdate.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostsRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/duck/git/miniProject/src/main/java/com/devduck/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="IndexControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -301,7 +291,8 @@
       <workItem from="1719890184258" duration="70000" />
       <workItem from="1719890276487" duration="4013000" />
       <workItem from="1719902625224" duration="11867000" />
-      <workItem from="1719984893062" duration="22189000" />
+      <workItem from="1719984893062" duration="22416000" />
+      <workItem from="1720163374925" duration="1567000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore add">
       <option name="closed" value="true" />
@@ -399,7 +390,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719996057035</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선, 세션저장소로 데이터베이스 사용">
+      <option name="closed" value="true" />
+      <created>1720085650939</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720085650940</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +417,8 @@
     <MESSAGE value="[JPA] 게시판 수정,삭제 구성" />
     <MESSAGE value="SpringSecurity + Google Login" />
     <MESSAGE value="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선," />
-    <option name="LAST_COMMIT_MESSAGE" value="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선," />
+    <MESSAGE value="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선, 세션저장소로 데이터베이스 사용" />
+    <option name="LAST_COMMIT_MESSAGE" value="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선, 세션저장소로 데이터베이스 사용" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

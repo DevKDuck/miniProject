@@ -31,7 +31,6 @@ public class IndexController {
             user.setId(sessionUser.getId());
             user.setName(sessionUser.getName());
             user.setEmail(sessionUser.getEmail());
-
             model.addAttribute("userEmail", user.getEmail());
         }
 
