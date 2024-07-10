@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="ec2 real-db.yml 읽도록 재수정2">
+    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="ec2 real-db.yml 읽도록 재수정3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-real.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-real.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +300,7 @@
       <workItem from="1719984893062" duration="22416000" />
       <workItem from="1720163374925" duration="4114000" />
       <workItem from="1720423600530" duration="88000" />
-      <workItem from="1720423705335" duration="13223000" />
+      <workItem from="1720423705335" duration="14073000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore add">
       <option name="closed" value="true" />
@@ -448,7 +446,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720592713021</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="ec2 real-db.yml 읽도록 재수정3">
+      <option name="closed" value="true" />
+      <created>1720594241281</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1720594241281</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +479,8 @@
     <MESSAGE value="ec2 real-db.yml 읽도록 추가" />
     <MESSAGE value="ec2 real-db.yml 읽도록 재수정" />
     <MESSAGE value="ec2 real-db.yml 읽도록 재수정2" />
-    <option name="LAST_COMMIT_MESSAGE" value="ec2 real-db.yml 읽도록 재수정2" />
+    <MESSAGE value="ec2 real-db.yml 읽도록 재수정3" />
+    <option name="LAST_COMMIT_MESSAGE" value="ec2 real-db.yml 읽도록 재수정3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
