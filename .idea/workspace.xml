@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선, 세션저장소로 데이터베이스 사용">
+    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="real.yml 추가 mariadb 연결 드라이버설정">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-real.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/CustomOAuth2UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/CustomOAuth2UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/dto/OAuthAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/config/auth/dto/OAuthAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devkduck/springboot/web/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +31,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="miniProject" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="miniProject" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="miniProject" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -97,6 +106,7 @@
     &quot;Gradle.PostsApiControllerTest.postsUpdate.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.PostsRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.miniProject [test].executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -111,7 +121,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;/Users/duck/git/miniProject/src/main/java/com/devduck/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -154,30 +164,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.devkduck.springboot.web.IndexControllerTest.mainPageLoading&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="PostsApiControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.devkduck.springboot.web.PostsApiControllerTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -236,6 +222,28 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="miniProject [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="miniProject.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.devkduck.springboot.Application" />
@@ -245,20 +253,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.miniProject [test]" />
       <item itemvalue="Gradle.IndexControllerTest" />
       <item itemvalue="Gradle.IndexControllerTest.mainPageLoading" />
-      <item itemvalue="Gradle.PostsApiControllerTest" />
       <item itemvalue="Gradle.PostsApiControllerTest.postsUpdate" />
       <item itemvalue="Gradle.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect" />
       <item itemvalue="Spring Boot.Application" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.miniProject [test]" />
         <item itemvalue="Gradle.IndexControllerTest" />
         <item itemvalue="Gradle.IndexControllerTest.mainPageLoading" />
         <item itemvalue="Gradle.PostsRepositoryTest.BaseTimeEntity_whenSave_thenCorrect" />
         <item itemvalue="Gradle.PostsApiControllerTest.postsUpdate" />
-        <item itemvalue="Gradle.PostsApiControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -292,7 +300,9 @@
       <workItem from="1719890276487" duration="4013000" />
       <workItem from="1719902625224" duration="11867000" />
       <workItem from="1719984893062" duration="22416000" />
-      <workItem from="1720163374925" duration="1567000" />
+      <workItem from="1720163374925" duration="4114000" />
+      <workItem from="1720423600530" duration="88000" />
+      <workItem from="1720423705335" duration="9804000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore add">
       <option name="closed" value="true" />
@@ -398,7 +408,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720085650940</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="[oAuth2] 네이버 로그인 추가">
+      <option name="closed" value="true" />
+      <created>1720165524672</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1720165524672</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +436,9 @@
     <MESSAGE value="SpringSecurity + Google Login" />
     <MESSAGE value="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선," />
     <MESSAGE value="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선, 세션저장소로 데이터베이스 사용" />
-    <option name="LAST_COMMIT_MESSAGE" value="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선, 세션저장소로 데이터베이스 사용" />
+    <MESSAGE value="[oAuth2] 네이버 로그인 추가" />
+    <MESSAGE value="real.yml 추가 mariadb 연결 드라이버설정" />
+    <option name="LAST_COMMIT_MESSAGE" value="real.yml 추가 mariadb 연결 드라이버설정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
