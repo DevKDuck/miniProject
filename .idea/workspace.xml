@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="ec2 real-db.yml 읽도록 재수정6">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/devduck/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devduck/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="plain.jar 생성 안하도록 추가" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -301,7 +298,7 @@
       <workItem from="1719984893062" duration="22416000" />
       <workItem from="1720163374925" duration="4114000" />
       <workItem from="1720423600530" duration="88000" />
-      <workItem from="1720423705335" duration="15826000" />
+      <workItem from="1720423705335" duration="16587000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore add">
       <option name="closed" value="true" />
@@ -479,7 +476,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720596615412</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="plain.jar 생성 안하도록 추가">
+      <option name="closed" value="true" />
+      <created>1720597526173</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1720597526173</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +513,8 @@
     <MESSAGE value="ec2 real-db.yml 읽도록 재수정4" />
     <MESSAGE value="ec2 real-db.yml 읽도록 재수정5" />
     <MESSAGE value="ec2 real-db.yml 읽도록 재수정6" />
-    <option name="LAST_COMMIT_MESSAGE" value="ec2 real-db.yml 읽도록 재수정6" />
+    <MESSAGE value="plain.jar 생성 안하도록 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="plain.jar 생성 안하도록 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
