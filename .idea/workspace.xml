@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="real.yml 추가 mariadb 연결 드라이버설정">
+    <list default="true" id="df7c1a78-9c91-41e0-bf4e-b7549f3c3f8d" name="Changes" comment="ec2 real-db.yml 읽도록 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-real.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-real.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +301,7 @@
       <workItem from="1719984893062" duration="22416000" />
       <workItem from="1720163374925" duration="4114000" />
       <workItem from="1720423600530" duration="88000" />
-      <workItem from="1720423705335" duration="11241000" />
+      <workItem from="1720423705335" duration="11736000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore add">
       <option name="closed" value="true" />
@@ -424,7 +423,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720589696653</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="ec2 real-db.yml 읽도록 추가">
+      <option name="closed" value="true" />
+      <created>1720591750921</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1720591750921</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +453,8 @@
     <MESSAGE value="[SpringSecurity] Security 6.1이상 무분별한 메서드 체이닝 -&gt; 람다형식으로 개선, 세션저장소로 데이터베이스 사용" />
     <MESSAGE value="[oAuth2] 네이버 로그인 추가" />
     <MESSAGE value="real.yml 추가 mariadb 연결 드라이버설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="real.yml 추가 mariadb 연결 드라이버설정" />
+    <MESSAGE value="ec2 real-db.yml 읽도록 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="ec2 real-db.yml 읽도록 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
