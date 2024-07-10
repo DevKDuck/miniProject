@@ -32,3 +32,7 @@ test {
     useJUnitPlatform()
 }
 
+//plain.jar 에서는 의존성을 제외하고 프로젝트를 만들어서 plain.jar 생성 안하게 하기
+jar {
+    enabled = false
+}
