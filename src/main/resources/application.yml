@@ -1,6 +1,9 @@
 spring:
   profiles:
-    include: oauth, real
+    include:
+      - oauth
+      - real
+      - real-db
 
   h2:
     console:
