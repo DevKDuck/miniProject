@@ -1,0 +1,48 @@
+name: Build and Deploy to EC2
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+        shell: bash
+
+      - name: Build and Test
+        run: ./gradlew build test
+
+      - name: Upload artifact to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: "ap-northeast-2"
+        run: |
+          aws s3 cp build/libs/your-app.jar s3://your-s3-bucket/path/to/your-app.jar --region $AWS_REGION
+          aws s3 cp appspec.yml s3://your-s3-bucket/path/to/appspec.yml --region $AWS_REGION
+          aws s3 cp scripts/ s3://your-s3-bucket/path/to/scripts/ --recursive --region $AWS_REGION
+
+      - name: Deploy to EC2 using CodeDeploy
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: "ap-northeast-2"
+        run: |
+          aws deploy create-deployment \
+            --application-name your-codedeploy-application \
+            --deployment-group-name your-codedeploy-deployment-group \
+            --s3-location bucket=your-s3-bucket,key=path/to/your-app.jar,bundleType=zip \
+            --region $AWS_REGION
