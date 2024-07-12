@@ -22,8 +22,8 @@ jobs:
         run: chmod +x ./gradlew
         shell: bash
 
-      - name: Build and Test
-        run: ./gradlew build test
+      - name: Build
+        run: ./gradlew build
 
       - name: Upload artifact to S3
         env:
