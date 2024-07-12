@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files: #CodeDeploy에게 애플리케이션의 파일 및 디렉토리를 배포할 위치를 알려준다.
+  - source: / #배포할 파일의 위치를 지정한다. 이 경우, 루트 디렉토리다.
+    destination: /home/ec2-user/ #해당 파일들이 어디에 위치해있는지 지정한다.
+    overwrite: yes #덮어쓰기
+
+permissions: #배포 후 해당 파일이나 디렉토리의 권한을 설정한다.
+  - object: / #권한을 변경하려는 대상을 지정한. 이 경우 루트 디렉토리를 지정한다.
+    pattern: "**" #권한을 변경하려는 파일이나 디렉토리의 패턴을 지정한다. 모든 파일과 디렉토리(**)를 대상으로 설정했다.
+    owner: ec2-user
+    group: ec2-user # 소유자 및 그룹을 ec2-user로 설정한다.
+
+hooks: # 배포의 단계별로 실행할 스크립트를 지정한다.
+  ApplicationStart:
+    - location: deploy.sh
+      timeout: 60 #deploy.sh가 완료될 때까지 기다린다.
+      runas: ec2-user #해당 스크립트를 실행할 사용자를 지정한다.
